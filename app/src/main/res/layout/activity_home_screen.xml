@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_screen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/Home_Screen" />
+
+        <Button
+            android:id="@+id/income"
+            android:layout_width="119dp"
+            android:layout_height="127dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginBottom="226dp"
+            android:alpha="0.0"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/expenses"
+            android:layout_width="116dp"
+            android:layout_height="127dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="69dp"
+            android:layout_marginBottom="226dp"
+            android:alpha="0.0"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="112dp"
+            android:layout_height="114dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="72dp"
+            android:layout_marginBottom="77dp"
+            android:alpha="0.0"
+            android:text="Button" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="118dp"
+            android:layout_height="123dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="71dp"
+            android:layout_marginBottom="71dp"
+            android:alpha="0.0"
+            android:text="Button" />
+
+        <EditText
+            android:id="@+id/hello_user"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="22dp"
+            android:background="@null"
+            android:ems="10"
+            android:fontFamily="@font/gothica1_extrabold"
+            android:inputType="textPersonName"
+            android:text="Hello,"
+            android:textColor="#2F3E46"
+            android:textSize="21sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="59dp"
+            android:background="@null"
+            android:ems="10"
+            android:fontFamily="@font/gothica1_extrabold"
+            android:inputType="textPersonName"
+            android:text="Somesh Jadhwani" 
+            android:textColor="#2F3E46"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

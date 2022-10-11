@@ -4,5 +4,9 @@
         android:fontStyle="normal"
         android:fontWeight="400"
         android:font="@font/rubik_regular" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/gothica1_extrabold" />
 
 </font-family>
