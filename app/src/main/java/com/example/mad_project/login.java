@@ -12,6 +12,8 @@ public class login extends AppCompatActivity {
     EditText ed1,ed2;
     //test comment
 
+    //somehs chtu
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
