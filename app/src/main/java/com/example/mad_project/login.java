@@ -33,7 +33,7 @@ public class login extends AppCompatActivity {
 
         String db_password = "admin";
         String db_email ="somesh.jadhwani104@nmims.edu.in";
-        email_validation obj2 = new email_validation();
+        validation obj2 = new validation();
         boolean login_val = obj2.login_validate(email,password,db_password);
         if(login_val)
         {

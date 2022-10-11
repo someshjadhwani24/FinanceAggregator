@@ -30,7 +30,7 @@ public class register_screen extends AppCompatActivity {
         String password= String.valueOf(ed3.getText());
         String re_password= String.valueOf(ed4.getText());
 
-        email_validation obj1=new email_validation();
+        validation obj1=new validation();
         boolean e_val=obj1.emailvalidate(email);
 
         boolean p_val=obj1.passwordvalidate(password,re_password);

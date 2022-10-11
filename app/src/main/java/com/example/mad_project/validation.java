@@ -1,6 +1,6 @@
 package com.example.mad_project;
 
-public class email_validation {
+public class validation {
 
     boolean emailvalidate(String email)
     {
