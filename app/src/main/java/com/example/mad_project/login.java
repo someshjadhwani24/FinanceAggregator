@@ -10,6 +10,7 @@ import android.widget.EditText;
 public class login extends AppCompatActivity {
 
     EditText ed1,ed2;
+    //test comment
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
