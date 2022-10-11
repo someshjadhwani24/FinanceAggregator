@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class register_screen extends AppCompatActivity {
 
@@ -38,10 +39,11 @@ public class register_screen extends AppCompatActivity {
             Intent obj=new Intent(register_screen.this,home_screen.class);
             startActivity(obj);
         }
-
-
-
+        else
+        {
+            Toast.makeText(getApplicationContext(),"Invalid details , please retry",Toast.LENGTH_LONG).show();
+        }
     }
 
-
 }
+//Todo : Fix register screen behenchod. Cant intent from splsh to register

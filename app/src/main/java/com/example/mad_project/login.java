@@ -32,6 +32,7 @@ public class login extends AppCompatActivity {
         String password=String.valueOf(ed2.getText());
 
         String db_password = "admin";
+        String db_email ="somesh.jadhwani104@nmims.edu.in";
         email_validation obj2 = new email_validation();
         boolean login_val = obj2.login_validate(email,password,db_password);
         if(login_val)
@@ -44,3 +45,5 @@ public class login extends AppCompatActivity {
     }
 
 }
+
+//Todo : Fix intents

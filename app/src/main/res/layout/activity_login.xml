@@ -27,9 +27,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="97dp"
-            android:layout_marginBottom="213dp"
+            android:layout_marginStart="102dp"
+            android:layout_marginBottom="198dp"
             android:alpha="0.0"
+            android:onClick="login"
             android:text="Button" />
 
         <Button
@@ -38,9 +39,10 @@
             android:layout_height="25dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="81dp"
-            android:layout_marginBottom="173dp"
+            android:layout_marginEnd="94dp"
+            android:layout_marginBottom="163dp"
             android:alpha="0.0"
+            android:onClick="sign_up"
             android:text="Button" />
 
         <EditText
@@ -49,8 +51,8 @@
             android:layout_height="35dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="36dp"
-            android:layout_marginBottom="371dp"
+            android:layout_marginStart="62dp"
+            android:layout_marginBottom="354dp"
             android:background="@null"
             android:ems="10"
             android:fontFamily="@font/rubik_regular"
@@ -64,8 +66,8 @@
             android:layout_height="32dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="44dp"
-            android:layout_marginBottom="294dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginBottom="281dp"
             android:background="@null"
             android:ems="10"
             android:fontFamily="@font/rubik_regular"
