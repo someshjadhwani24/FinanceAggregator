@@ -47,4 +47,16 @@ public class email_validation {
 
     }
 
+    boolean login_validate(String user_email,String user_pass,String db_pass)
+    {
+        if(emailvalidate(user_email) && user_pass == db_pass )
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 }
