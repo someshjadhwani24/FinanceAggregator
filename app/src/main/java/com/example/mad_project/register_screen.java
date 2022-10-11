@@ -1,7 +1,7 @@
 package com.example.mad_project;
-
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -29,12 +29,19 @@ public class register_screen extends AppCompatActivity {
         String password= String.valueOf(ed3.getText());
         String re_password= String.valueOf(ed4.getText());
 
+        email_validation obj1=new email_validation();
+        boolean e_val=obj1.emailvalidate(email);
 
-        if(password==re_password)
+        boolean p_val=obj1.passwordvalidate(password,re_password);
+        if(e_val && p_val)
         {
-
+            Intent obj=new Intent(register_screen.this,home_screen.class);
+            startActivity(obj);
         }
 
+
+
     }
+
 
 }

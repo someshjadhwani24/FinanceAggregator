@@ -13,22 +13,22 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="412dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="7dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="11dp"
             app:srcCompat="@drawable/login_screen__1" />
 
         <Button
             android:id="@+id/login"
-            android:layout_width="167dp"
+            android:layout_width="188dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="121dp"
-            android:layout_marginBottom="202dp"
+            android:layout_marginStart="97dp"
+            android:layout_marginBottom="213dp"
             android:alpha="0.0"
             android:text="Button" />
 
@@ -38,19 +38,19 @@
             android:layout_height="25dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="93dp"
-            android:layout_marginBottom="169dp"
+            android:layout_marginEnd="81dp"
+            android:layout_marginBottom="173dp"
             android:alpha="0.0"
             android:text="Button" />
 
         <EditText
             android:id="@+id/enter_email"
-            android:layout_width="303dp"
-            android:layout_height="wrap_content"
+            android:layout_width="309dp"
+            android:layout_height="35dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="61dp"
-            android:layout_marginBottom="365dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginBottom="371dp"
             android:background="@null"
             android:ems="10"
             android:fontFamily="@font/rubik_regular"
@@ -60,12 +60,12 @@
 
         <EditText
             android:id="@+id/enter_password"
-            android:layout_width="304dp"
-            android:layout_height="wrap_content"
+            android:layout_width="303dp"
+            android:layout_height="32dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="60dp"
-            android:layout_marginBottom="286dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginBottom="294dp"
             android:background="@null"
             android:ems="10"
             android:fontFamily="@font/rubik_regular"

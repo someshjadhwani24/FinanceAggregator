@@ -1,6 +1,8 @@
 package com.example.mad_project;
 
-public class user {
+public class user
+{
+
     String user_name;
     String user_id;
     String password;

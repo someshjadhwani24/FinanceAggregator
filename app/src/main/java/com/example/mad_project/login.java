@@ -10,9 +10,6 @@ import android.widget.EditText;
 public class login extends AppCompatActivity {
 
     EditText ed1,ed2;
-    //test comment
-
-    //somehs chtu
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +30,14 @@ public class login extends AppCompatActivity {
 
         String email= String.valueOf(ed1.getText());
         String password=String.valueOf(ed2.getText());
+
+        String db_password = "admin";
+        if(password==db_password)
+        {
+            Intent obj=new Intent(login.this,home_screen.class);
+            startActivity(obj);
+
+        }
 
 
     }
