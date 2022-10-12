@@ -36,7 +36,7 @@ public class validation {
             }
 
         }
-        if(numberFlag && capitalFlag && lowerCaseFlag && password==re_password)
+        if(numberFlag && capitalFlag && lowerCaseFlag && password.equals(re_password) && password!=null)
         {
             return true;
         }
@@ -49,7 +49,7 @@ public class validation {
 
     boolean login_validate(String user_email,String user_pass,String db_pass)
     {
-        if(emailvalidate(user_email) && user_pass == db_pass )
+        if(emailvalidate(user_email) && user_pass.equals(db_pass))
         {
             return true;
         }
