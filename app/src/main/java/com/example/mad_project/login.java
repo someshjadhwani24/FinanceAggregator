@@ -10,11 +10,14 @@ import android.widget.EditText;
 public class login extends AppCompatActivity {
 
     EditText ed1,ed2;
+    register_screen check = new register_screen();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        check.name="Somesh jadhwani";
     }
 
     public void sign_up(View v)
@@ -31,19 +34,13 @@ public class login extends AppCompatActivity {
         String email= String.valueOf(ed1.getText());
         String password=String.valueOf(ed2.getText());
 
-        String db_password = "admin";
-        String db_email ="somesh.jadhwani104@nmims.edu.in";
-        validation obj2 = new validation();
-        boolean login_val = obj2.login_validate(email,password,db_password);
-        if(login_val)
+        String db_password = "Appleipod1";
+        if(password.equals(db_password))
         {
+            System.out.println(check.name);
             Intent obj=new Intent(login.this,home_screen.class);
             startActivity(obj);
+            obj.putExtra("Message_key2",check.name);
         }
-
-
     }
-
 }
-
-//Todo : Fix intents

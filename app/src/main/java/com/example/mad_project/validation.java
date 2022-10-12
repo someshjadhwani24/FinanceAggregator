@@ -59,4 +59,16 @@ public class validation {
         }
     }
 
+    public static void main(String[] args) {
+        String address = "somesh_jadhwani01@hotmail.com";
+        validation obj1 = new validation();
+        if (obj1.emailvalidate(address))
+        {
+            System.out.println("This works");
+        }
+        else{
+            System.out.println("Failure");
+        }
+    }
+
 }
