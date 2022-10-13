@@ -33,6 +33,7 @@ public class register_screen extends AppCompatActivity {
         email= String.valueOf(ed2.getText());
         password= String.valueOf(ed3.getText());
         re_password= String.valueOf(ed4.getText());
+        long user_id = 704720;
 
         validation obj1=new validation();
         boolean e_val=obj1.emailvalidate(email);
@@ -44,8 +45,13 @@ public class register_screen extends AppCompatActivity {
         System.out.println(p_val);
         if(e_val && p_val && r_val)
         {
+            User.user_name=name;
+            User.user_id = user_id;
+            User.logged_in = true;
+            User.email = email;
+            User.password = password;
+
             Intent obj=new Intent(register_screen.this,home_screen.class);
-            obj.putExtra("message_key",name);
             startActivity(obj);
         }
         else if(e_val == false)
@@ -69,7 +75,7 @@ public class register_screen extends AppCompatActivity {
 
     public void signin_regscreen(View v)
     {
-        Intent intent1 = new Intent(getBaseContext(),login.class);
+        Intent intent1 = new Intent(getBaseContext(), Login.class);
         startActivity(intent1);
     }
 

@@ -6,8 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
-public class login extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     EditText ed1,ed2;
     register_screen check = new register_screen();
@@ -22,7 +23,7 @@ public class login extends AppCompatActivity {
 
     public void sign_up(View v)
     {
-        Intent obj=new Intent(login.this,register_screen.class);
+        Intent obj=new Intent(Login.this,register_screen.class);
         startActivity(obj);
     }
 
@@ -35,12 +36,28 @@ public class login extends AppCompatActivity {
         String password=String.valueOf(ed2.getText());
 
         String db_password = "Appleipod1";
-        if(password.equals(db_password))
+        String db_email = "somesh@gmail.com";
+        String db_username = "Somesh Jadhwani";
+        long db_userid = 704720;
+        if(password.equals(db_password ) && db_email.length() >0)
         {
-            System.out.println(check.name);
-            Intent obj=new Intent(login.this,home_screen.class);
+
+            User current_user = new User();
+            User.email =db_email;
+            User.user_name = db_username;
+            User.user_id = db_userid;
+            User.password = db_password;
+            User.logged_in = true;
+
+            System.out.println("Data set in class");
+
+            Intent obj=new Intent(Login.this,home_screen.class);
             startActivity(obj);
-            obj.putExtra("Message_key2",check.name);
+
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"Invalid Login Credentials, please retry",Toast.LENGTH_LONG).show();
         }
     }
 }

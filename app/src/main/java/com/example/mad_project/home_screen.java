@@ -16,9 +16,8 @@ public class home_screen extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen);
         TextView user = (TextView) findViewById(R.id.dynamic_user);
 
-        Intent intent = getIntent();
-        str = intent.getStringExtra("message_key");
-        str = intent.getStringExtra("Message_key2");
-        user.setText(str);
+        System.out.println("The current user is " + User.user_name);
+
+        user.setText(User.user_name);
     }
 }
