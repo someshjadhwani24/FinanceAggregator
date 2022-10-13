@@ -20,25 +20,7 @@ public class MainActivity extends AppCompatActivity {
         b1 = (Button) findViewById(R.id.register_main);
         b2 = (Button) findViewById(R.id.sign_in);
 
-        Database db=new Database(this);
-        long id=7048;
-        String name="abc";
-        String email="abc@gmail.com";
-        Boolean checki=db.insertuserdata(id,name,email);
-        System.out.println(checki);
-        Cursor res=db.viewuserdata();
-        if(res.getCount()==0)
-        {
-            System.out.println("No data");
-        }
-        StringBuffer b=new StringBuffer();
-        while(res.moveToNext())
-        {
-            b.append("Id:- "+res.getString(0)+"\n");
-            b.append("Name:- "+res.getString(1)+"\n");
-            b.append("Email:- "+res.getString(2)+"\n");
-        }
-        System.out.println(b);
+
     }
 
 

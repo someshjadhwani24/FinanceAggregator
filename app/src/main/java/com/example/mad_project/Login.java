@@ -3,6 +3,7 @@ package com.example.mad_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -32,10 +33,35 @@ public class Login extends AppCompatActivity {
         String email= String.valueOf(ed1.getText());
         String password=String.valueOf(ed2.getText());
 
-        String db_password = "Appleipod1";
-        String db_email = "somesh@gmail.com";
-        String db_username = "Somesh Jadhwani";
-        long db_userid = 704720;
+        User_Database db=new User_Database(this);
+        Cursor res=db.viewuseremail(email);
+        if(res.getCount()==0)
+        {
+            System.out.println("String false");
+        }
+        StringBuffer b=new StringBuffer();
+        String db_password=null;
+        String db_email=null;
+        String db_username=null;
+        long db_userid=0;
+        while(res.moveToNext())
+        {
+//
+//            b.append("Id:"+res.getString(0));
+//            b.append("Name:"+res.getString(1));
+//            b.append("Email:"+res.getString(2));
+//            b.append("Password:"+res.getString(3));
+//            b.append("Total Balance:"+res.getString(4));
+             db_password = res.getString(3);
+             db_email = res.getString(2);
+             db_username = res.getString(1);
+             db_userid = res.getInt(0);
+        }
+
+        System.out.println(db_password);
+
+
+
         if(password.equals(db_password) && db_email.length() >0)
         {
 

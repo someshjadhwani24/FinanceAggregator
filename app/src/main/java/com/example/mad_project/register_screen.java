@@ -2,10 +2,13 @@ package com.example.mad_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.util.Random;
 
 public class register_screen extends AppCompatActivity {
 
@@ -33,25 +36,30 @@ public class register_screen extends AppCompatActivity {
         email= String.valueOf(ed2.getText());
         password= String.valueOf(ed3.getText());
         re_password= String.valueOf(ed4.getText());
-        long user_id = 704720;
+        long user_id;
 
         validation obj1=new validation();
         boolean e_val=obj1.emailvalidate(email);
         boolean p_val=obj1.passwordvalidate(password,password);
         boolean r_val = password.equals(re_password);
-        System.out.println(r_val);
-        System.out.println(password);
-        System.out.println(re_password);
-        System.out.println(p_val);
+
         if(e_val && p_val && r_val)
         {
+            user_id=new Random().nextInt(900000)+100000;
+
             User.user_name=name;
             User.user_id = user_id;
             User.logged_in = true;
             User.email = email;
             User.password = password;
+            User.total_balance=0;
 
-            //Add database class here
+
+
+            User_Database db=new User_Database(this);
+
+            Boolean checki=db.insertuserdata(user_id,name,email,password,User.total_balance);
+            System.out.println("Did it work" + checki);
 
             Intent obj=new Intent(register_screen.this,home_screen.class);
             startActivity(obj);
@@ -73,6 +81,9 @@ public class register_screen extends AppCompatActivity {
         {
             Toast.makeText(getApplicationContext(),"Invalid details , please retry",Toast.LENGTH_LONG).show();
         }
+
+
+
     }
 
     public void signin_regscreen(View v)

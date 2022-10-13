@@ -8,6 +8,8 @@ public class User
     public static String password;
     public static String email;
     public static boolean logged_in;
+    public static int total_balance;
+
 
 
 }
