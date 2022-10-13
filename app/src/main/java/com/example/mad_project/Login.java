@@ -11,14 +11,11 @@ import android.widget.Toast;
 public class Login extends AppCompatActivity {
 
     EditText ed1,ed2;
-    register_screen check = new register_screen();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        check.name="Somesh jadhwani";
     }
 
     public void sign_up(View v)
@@ -48,8 +45,6 @@ public class Login extends AppCompatActivity {
             User.user_id = db_userid;
             User.password = db_password;
             User.logged_in = true;
-
-            System.out.println("Data set in class");
 
             Intent obj=new Intent(Login.this,home_screen.class);
             startActivity(obj);

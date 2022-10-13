@@ -81,5 +81,7 @@ public class register_screen extends AppCompatActivity {
         startActivity(intent1);
     }
 
+
+
 }
-//Todo : Fix register screen behenchod. Cant intent from splsh to register
+
