@@ -51,6 +51,8 @@ public class register_screen extends AppCompatActivity {
             User.email = email;
             User.password = password;
 
+            //Add database class here
+
             Intent obj=new Intent(register_screen.this,home_screen.class);
             startActivity(obj);
         }

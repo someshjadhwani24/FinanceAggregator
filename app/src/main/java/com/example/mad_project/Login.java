@@ -39,7 +39,7 @@ public class Login extends AppCompatActivity {
         String db_email = "somesh@gmail.com";
         String db_username = "Somesh Jadhwani";
         long db_userid = 704720;
-        if(password.equals(db_password ) && db_email.length() >0)
+        if(password.equals(db_password) && db_email.length() >0)
         {
 
             User current_user = new User();
