@@ -86,6 +86,14 @@ public class User_Database extends SQLiteOpenHelper {
         return c;
     }
 
+    public Cursor viewregisteredemails()
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        String query="select user_email from users";
+        Cursor c=db.rawQuery(query, null);
+        return c;
+    }
+
     public Cursor viewuserpassword(String email)
     {
         SQLiteDatabase db=this.getWritableDatabase();

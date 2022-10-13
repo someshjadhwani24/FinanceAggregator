@@ -15,7 +15,7 @@
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/home_screen" />>>
+            app:srcCompat="@drawable/home_screen_main" />>>
 
         <Button
             android:id="@+id/income"
@@ -89,6 +89,17 @@
             android:text="Hello,"
             android:textColor="#2F3E46"
             android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="34dp"
+            android:alpha="0.0"
+            android:onClick="logout" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

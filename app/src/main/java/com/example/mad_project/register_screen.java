@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class register_screen extends AppCompatActivity {
@@ -42,8 +44,32 @@ public class register_screen extends AppCompatActivity {
         boolean e_val=obj1.emailvalidate(email);
         boolean p_val=obj1.passwordvalidate(password,password);
         boolean r_val = password.equals(re_password);
+        boolean a_val;
 
-        if(e_val && p_val && r_val)
+        User_Database db=new User_Database(this);
+
+        List<String> registered_emails = new ArrayList<String>();
+        Cursor res1 = db.viewregisteredemails();
+        if(res1.getCount()==0)
+        {
+            a_val = true;
+        }
+        while(res1.moveToNext())
+        {
+            registered_emails.add(res1.getString(0));
+
+        }
+        System.out.println(registered_emails);
+        if(registered_emails.contains(email))
+        {
+            a_val=false;
+        }
+        else
+        {
+            a_val=true;
+        }
+
+        if(e_val && p_val && r_val && a_val)
         {
             user_id=new Random().nextInt(900000)+100000;
 
@@ -53,10 +79,6 @@ public class register_screen extends AppCompatActivity {
             User.email = email;
             User.password = password;
             User.total_balance=0;
-
-
-
-            User_Database db=new User_Database(this);
 
             Boolean checki=db.insertuserdata(user_id,name,email,password,User.total_balance);
             System.out.println("Did it work" + checki);
@@ -77,12 +99,14 @@ public class register_screen extends AppCompatActivity {
         {
             Toast.makeText(getApplicationContext(),"Passwords dont match , please retry",Toast.LENGTH_LONG).show();
         }
+        else if(a_val == false)
+        {
+            Toast.makeText(getApplicationContext(),"Email is already in use, please retry",Toast.LENGTH_LONG).show();
+        }
         else
         {
             Toast.makeText(getApplicationContext(),"Invalid details , please retry",Toast.LENGTH_LONG).show();
         }
-
-
 
     }
 

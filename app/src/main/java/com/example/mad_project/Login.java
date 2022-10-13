@@ -46,21 +46,11 @@ public class Login extends AppCompatActivity {
         long db_userid=0;
         while(res.moveToNext())
         {
-//
-//            b.append("Id:"+res.getString(0));
-//            b.append("Name:"+res.getString(1));
-//            b.append("Email:"+res.getString(2));
-//            b.append("Password:"+res.getString(3));
-//            b.append("Total Balance:"+res.getString(4));
              db_password = res.getString(3);
              db_email = res.getString(2);
              db_username = res.getString(1);
              db_userid = res.getInt(0);
         }
-
-        System.out.println(db_password);
-
-
 
         if(password.equals(db_password) && db_email.length() >0)
         {
