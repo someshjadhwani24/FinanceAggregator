@@ -44,6 +44,7 @@
             android:onClick="register_2"
             android:text="Button"
             android:visibility="visible" />
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
