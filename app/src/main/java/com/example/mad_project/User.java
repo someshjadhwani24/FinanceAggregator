@@ -10,7 +10,5 @@ public class User
     public static boolean logged_in;
     public static int total_balance;
 
-
-
 }
 

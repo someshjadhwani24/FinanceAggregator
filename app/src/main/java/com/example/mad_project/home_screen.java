@@ -27,4 +27,25 @@ public class home_screen extends AppCompatActivity {
         Intent intent_logout = new Intent(getBaseContext(), MainActivity.class);
         startActivity(intent_logout);
     }
+
+    public void income(View v)
+    {
+        Intent intent_income = new Intent(getBaseContext(),Income.class);
+        startActivity(intent_income);
+        System.out.println("Home Screen intent works");
+    }
+
+    public void expense(View v)
+    {
+        Intent intent_expense = new Intent(getBaseContext(),Expense.class);
+        startActivity(intent_expense);
+        System.out.println("Home Screen intent works");
+    }
+
+    public void profile(View v)
+    {
+        Intent intent_profile = new Intent(getBaseContext(),Profile.class);
+        startActivity(intent_profile);
+
+    }
 }

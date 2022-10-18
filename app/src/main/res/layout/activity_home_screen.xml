@@ -26,6 +26,7 @@
             android:layout_marginStart="70dp"
             android:layout_marginBottom="226dp"
             android:alpha="0.0"
+            android:onClick="income"
             android:text="Button" />
 
         <Button
@@ -37,6 +38,7 @@
             android:layout_marginEnd="69dp"
             android:layout_marginBottom="226dp"
             android:alpha="0.0"
+            android:onClick="expense"
             android:text="Button" />
 
         <Button
@@ -48,6 +50,7 @@
             android:layout_marginStart="72dp"
             android:layout_marginBottom="77dp"
             android:alpha="0.0"
+            android:onClick="profile"
             android:text="Button" />
 
         <Button
@@ -96,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="36dp"
             android:layout_marginEnd="34dp"
             android:alpha="0.0"
             android:onClick="logout" />
