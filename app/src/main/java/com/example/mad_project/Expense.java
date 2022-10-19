@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +19,7 @@ public class Expense extends AppCompatActivity {
     TextView ed5,ed6;
     EditText ed1,ed2,ed3;
     int account_pick =1;
+    Button bank,upi,cash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,7 @@ public class Expense extends AppCompatActivity {
         ed5=(TextView) findViewById(R.id.date);
         ed6 = (TextView) findViewById(R.id.dynamic_amt);
 
-        user_exp.setText(User.user_name);
+        user_exp.setText("Hello" + User.user_name);
 
 
         Calendar cal = Calendar.getInstance();
@@ -43,23 +45,37 @@ public class Expense extends AppCompatActivity {
         System.out.println(total_bal);
         ed6.setText("INR" + total_bal);
 
+        bank = (Button) findViewById(R.id.bank);
+        upi = (Button) findViewById(R.id.upi);
+        cash = (Button) findViewById(R.id.Cash);
+
     }
 
     public void bank(View v)
     {
         account_pick =1;
+        cash.setAlpha(0.6f);
+        upi.setAlpha(0.6f);
+        bank.setAlpha(1.0f);
+
 
     }
 
     public void upi(View v)
     {
         account_pick =2;
+        cash.setAlpha(0.6f);
+        upi.setAlpha(1f);
+        bank.setAlpha(0.6f);
 
     }
 
     public void cash(View v)
     {
         account_pick =3;
+        cash.setAlpha(1f);
+        upi.setAlpha(0.6f);
+        bank.setAlpha(0.6f);
 
     }
 
@@ -68,14 +84,22 @@ public class Expense extends AppCompatActivity {
         ed1=(EditText) findViewById(R.id.amount);
         ed2=(EditText) findViewById(R.id.enter_category);
         ed3=(EditText) findViewById(R.id.desc);
+        int amount;
 
         String amt_value = String.valueOf(ed1.getText());
-        int amount = Integer.parseInt(amt_value);
+        if(amt_value.length() > 0)
+        {
+            amount = Integer.parseInt(amt_value);
+        }
+        else
+        {
+            amount = 0;
+        }
         String desc= String.valueOf(ed3.getText());
         String category=String.valueOf(ed2.getText());
 
         Intent record_obj = new Intent(getApplicationContext(),home_screen.class);
-        Toast.makeText(getApplicationContext(),"Expense recorded",Toast.LENGTH_LONG).show();
+
 
         User.total_balance = User.total_balance - amount ;
         Transaction.amount = amount;
@@ -89,7 +113,23 @@ public class Expense extends AppCompatActivity {
         System.out.println(Account.upi_balance);
         System.out.println(Account.cash_balance);
 
-        startActivity(record_obj);
+        if(User.total_balance < 1)
+        {
+            Toast.makeText(getApplicationContext(),"Your total balance has gone into negative",Toast.LENGTH_LONG).show();
+
+        }
+
+        if(amt_value.length() < 1)
+        {
+            Toast.makeText(getApplicationContext(),"Amount Cant be empty",Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"Expense recorded",Toast.LENGTH_LONG).show();
+            startActivity(record_obj);
+        }
+
+
 
     }
 

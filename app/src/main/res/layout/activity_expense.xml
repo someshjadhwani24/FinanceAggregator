@@ -19,42 +19,29 @@
             app:srcCompat="@drawable/input_expense_2" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="27dp"
-            android:background="@null"
-            android:fontFamily="@font/gothica1_extrabold"
-            android:inputType="textPersonName"
-            android:text="Hello"
-            android:textColor="#2F3E46"
-            android:textSize="25sp" />
-
-        <TextView
             android:id="@+id/dynamic_user_expense"
-            android:layout_width="267dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="119dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="27dp"
             android:background="@null"
             android:fontFamily="@font/gothica1_extrabold"
             android:inputType="textPersonName"
+            android:gravity="center"
             android:textColor="#2F3E46"
             android:textSize="25sp" />
 
         <TextView
             android:id="@+id/dynamic_amt"
-            android:layout_width="267dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="48dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="84dp"
+            android:gravity="center"
             android:background="@null"
             android:fontFamily="@font/gothica1_extrabold"
             android:inputType="textPersonName"
@@ -70,10 +57,10 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="58dp"
             android:layout_marginBottom="518dp"
-            android:alpha="0.5"
             android:background="@null"
             android:ems="10"
             android:fontFamily="@font/rubik_medium"
+            android:alpha="0.5"
             android:hint="Enter Amount"
             android:inputType="number"
             android:textSize="18sp" />
@@ -90,7 +77,7 @@
             android:background="@null"
             android:ems="10"
             android:fontFamily="@font/rubik_medium"
-            android:hint="Category"
+            android:hint="Category (Optional)"
             android:inputType="text"
             android:textSize="18sp" />
 
@@ -106,10 +93,10 @@
             android:background="@null"
             android:ems="10"
             android:fontFamily="@font/rubik_medium"
-            android:hint="Description"
-
+            android:hint="Description (Optional)"
             android:inputType="text"
             android:textSize="18sp" />
+
 
         <TextView
             android:id="@+id/date"
@@ -117,14 +104,13 @@
             android:layout_height="39dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="61dp"
-            android:layout_marginTop="503dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="499dp"
+            android:alpha="0.5"
             android:background="@null"
-            android:alpha="0.8"
-            android:fontFamily="@font/gothica1_extrabold"
+            android:fontFamily="@font/rubik_medium"
             android:textColor="#2F3E46"
             android:textSize="18sp" />
-
 
         <Button
             android:id="@+id/record_expense"
@@ -191,41 +177,52 @@
             android:onClick="nav_profile"
             android:alpha="0.0" />
 
+
         <Button
             android:id="@+id/bank"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="61dp"
+            android:layout_width="104dp"
+            android:layout_height="49dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="43dp"
-            android:layout_marginTop="566dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="567dp"
+            android:backgroundTint="#354F52"
+            android:elevation="30dp"
+            android:fontFamily="@font/rubik_semibold"
             android:onClick="bank"
-            android:alpha="0.5" />
+            android:text="Bank"
+            android:alpha="1"
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/upi"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="61dp"
+            android:layout_width="104dp"
+            android:layout_height="49dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="156dp"
-            android:layout_marginTop="565dp"
-            android:onClick="upi"
-            android:alpha="0.5" />
+            android:layout_marginStart="151dp"
+            android:layout_marginTop="567dp"
+            android:backgroundTint="#354F52"
+            android:text="Upi"
+            android:alpha="0.6"
+            android:fontFamily="@font/rubik_semibold"
+            android:textSize="14sp"
+            android:onClick="upi" />
 
         <Button
             android:id="@+id/Cash"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="61dp"
+            android:layout_width="104dp"
+            android:layout_height="49dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="273dp"
-            android:layout_marginTop="564dp"
-            android:onClick="cash"
-            android:alpha="0.5" />
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="567dp"
+            android:backgroundTint="#354F52"
+            android:text="Cash"
+            android:alpha="0.6"
+            android:fontFamily="@font/rubik_semibold"
+            android:textSize="14sp"
+            android:onClick="cash" />
 
 
     </RelativeLayout>

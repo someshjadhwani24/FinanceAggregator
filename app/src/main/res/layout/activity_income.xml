@@ -10,36 +10,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="-6dp"
+            android:layout_marginEnd="-4dp"
             app:srcCompat="@drawable/input_income" />
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="27dp"
-            android:background="@null"
-            android:fontFamily="@font/gothica1_extrabold"
-            android:inputType="textPersonName"
-            android:text="Hello"
-            android:textColor="#2F3E46"
-            android:textSize="25sp" />
-
-        <TextView
             android:id="@+id/dynamic_user"
-            android:layout_width="267dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
+            android:gravity="center"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="119dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="27dp"
             android:background="@null"
             android:fontFamily="@font/gothica1_extrabold"
@@ -49,16 +36,15 @@
 
         <TextView
             android:id="@+id/dynamic_amt"
-            android:layout_width="267dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="50dp"
             android:layout_marginTop="88dp"
             android:background="@null"
             android:fontFamily="@font/gothica1_extrabold"
+            android:gravity="center"
             android:inputType="textPersonName"
-            android:textColor="#2F3E46"
+            android:textColor="#354F52"
             android:textSize="30sp" />
 
 
@@ -68,11 +54,12 @@
             android:layout_height="35dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="62dp"
-            android:layout_marginBottom="499dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginBottom="506dp"
+            android:alpha="0.5"
             android:background="@null"
             android:ems="10"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/rubik_medium"
             android:hint="Enter Amount"
             android:inputType="number"
             android:textSize="18sp" />
@@ -83,12 +70,13 @@
             android:layout_height="35dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="62dp"
-            android:layout_marginBottom="422dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginBottom="430dp"
+            android:alpha="0.5"
             android:background="@null"
             android:ems="10"
-            android:fontFamily="@font/rubik_regular"
-            android:hint="Category"
+            android:fontFamily="@font/rubik_medium"
+            android:hint="Category (Optional)"
             android:inputType="text"
             android:textSize="18sp" />
 
@@ -98,12 +86,13 @@
             android:layout_height="35dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="67dp"
-            android:layout_marginBottom="346dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginBottom="349dp"
+            android:alpha="0.5"
             android:background="@null"
             android:ems="10"
-            android:fontFamily="@font/rubik_regular"
-            android:hint="Description"
+            android:fontFamily="@font/rubik_medium"
+            android:hint="Description (Optional)"
             android:inputType="text"
             android:textSize="18sp" />
 
@@ -113,27 +102,59 @@
             android:layout_height="39dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="61dp"
-            android:layout_marginTop="503dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="511dp"
+            android:alpha="0.6"
             android:background="@null"
-            android:fontFamily="@font/gothica1_extrabold"
+            android:fontFamily="@font/rubik_medium"
             android:textColor="#2F3E46"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/account"
-            android:layout_width="309dp"
-            android:layout_height="35dp"
+        <Button
+            android:id="@+id/bank"
+            android:layout_width="104dp"
+            android:layout_height="49dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="66dp"
-            android:layout_marginBottom="189dp"
-            android:background="@null"
-            android:ems="10"
-            android:fontFamily="@font/rubik_regular"
-            android:hint="Select Account"
-            android:inputType="number"
-            android:textSize="18sp" />
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="567dp"
+            android:backgroundTint="#354F52"
+            android:elevation="30dp"
+            android:fontFamily="@font/rubik_semibold"
+            android:onClick="bank"
+            android:text="Bank"
+            android:alpha="1"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/upi"
+            android:layout_width="104dp"
+            android:layout_height="49dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="151dp"
+            android:layout_marginTop="567dp"
+            android:backgroundTint="#354F52"
+            android:text="Upi"
+            android:alpha="0.6"
+            android:fontFamily="@font/rubik_semibold"
+            android:textSize="14sp"
+            android:onClick="upi" />
+
+        <Button
+            android:id="@+id/Cash"
+            android:layout_width="104dp"
+            android:layout_height="49dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="567dp"
+            android:backgroundTint="#354F52"
+            android:text="Cash"
+            android:alpha="0.6"
+            android:fontFamily="@font/rubik_semibold"
+            android:textSize="14sp"
+            android:onClick="cash" />
 
         <Button
             android:id="@+id/record_income"
