@@ -43,7 +43,7 @@ public class Expense extends AppCompatActivity {
 
         String total_bal = Integer.toString(User.total_balance);
         System.out.println(total_bal);
-        ed6.setText("INR" + total_bal);
+        ed6.setText("INR " + total_bal);
 
         bank = (Button) findViewById(R.id.bank);
         upi = (Button) findViewById(R.id.upi);

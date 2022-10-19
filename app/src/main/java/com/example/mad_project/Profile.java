@@ -60,4 +60,11 @@ public class Profile extends AppCompatActivity {
         startActivity(nav_acc);
 
     }
+
+    public void add_acc(View v)
+    {
+        Intent nav_acc = new Intent(getApplicationContext(),CreateAccount.class);
+        startActivity(nav_acc);
+
+    }
 }

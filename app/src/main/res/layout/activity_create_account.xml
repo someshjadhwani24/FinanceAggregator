@@ -4,124 +4,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Expense">
+    tools:context=".CreateAccount">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="410dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="0dp"
-            app:srcCompat="@drawable/input_expense_2" />
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/add_acc" />
+
 
         <TextView
-            android:id="@+id/dynamic_user_expense"
+            android:id="@+id/dynamic_user_addacc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="27dp"
+            android:layout_marginTop="297dp"
             android:background="@null"
             android:fontFamily="@font/gothica1_extrabold"
-            android:inputType="textPersonName"
             android:gravity="center"
+            android:inputType="textPersonName"
             android:textColor="#2F3E46"
             android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/dynamic_amt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="84dp"
-            android:gravity="center"
-            android:background="@null"
-            android:fontFamily="@font/rubik_semibold"
-            android:inputType="textPersonName"
-            android:textColor="#2F3E46"
-            android:textSize="30sp" />
-
-
         <EditText
-            android:id="@+id/amount"
+            android:id="@+id/enter_name"
             android:layout_width="309dp"
             android:layout_height="35dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="58dp"
-            android:layout_marginBottom="518dp"
+            android:layout_marginStart="69dp"
+            android:layout_marginBottom="372dp"
+            android:alpha="0.5"
             android:background="@null"
             android:ems="10"
             android:fontFamily="@font/rubik_medium"
-            android:alpha="0.5"
-            android:hint="Enter Amount"
+            android:hint="Enter Account Name"
             android:inputType="number"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/enter_category"
+            android:id="@+id/enter_number"
             android:layout_width="309dp"
             android:layout_height="35dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="61dp"
-            android:layout_marginBottom="440dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginBottom="313dp"
             android:alpha="0.5"
             android:background="@null"
             android:ems="10"
             android:fontFamily="@font/rubik_medium"
-            android:hint="Category (Optional)"
+            android:hint="Enter Account Number"
             android:inputType="text"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/desc"
+            android:id="@+id/enter_bal"
             android:layout_width="309dp"
             android:layout_height="35dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="62dp"
-            android:layout_marginBottom="362dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginBottom="247dp"
             android:alpha="0.5"
             android:background="@null"
             android:ems="10"
             android:fontFamily="@font/rubik_medium"
-            android:hint="Description (Optional)"
+            android:hint="Enter the Opening Balance"
             android:inputType="text"
             android:textSize="18sp" />
 
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="259dp"
-            android:layout_height="39dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="63dp"
-            android:layout_marginTop="499dp"
-            android:alpha="0.5"
-            android:background="@null"
-            android:fontFamily="@font/rubik_medium"
-            android:textColor="#2F3E46"
-            android:textSize="18sp" />
-
         <Button
-            android:id="@+id/record_expense"
+            android:id="@+id/add_acc"
             android:alpha="0.0"
             android:layout_width="222dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="91dp"
-            android:onClick="record_expense"
+            android:onClick="addac"
             android:layout_marginBottom="101dp"/>
+
+        <Button
+            android:id="@+id/bank"
+            android:layout_width="104dp"
+            android:layout_height="49dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="592dp"
+            android:backgroundTint="#354F52"
+            android:elevation="30dp"
+            android:fontFamily="@font/rubik_semibold"
+            android:onClick="bank"
+            android:text="Bank"
+            android:alpha="1"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/upi"
+            android:layout_width="104dp"
+            android:layout_height="49dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="151dp"
+            android:layout_marginTop="592dp"
+            android:backgroundTint="#354F52"
+            android:text="Upi"
+            android:alpha="0.6"
+            android:fontFamily="@font/rubik_semibold"
+            android:textSize="14sp"
+            android:onClick="upi" />
+
+        <Button
+            android:id="@+id/Cash"
+            android:layout_width="104dp"
+            android:layout_height="49dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="592dp"
+            android:backgroundTint="#354F52"
+            android:text="Cash"
+            android:alpha="0.6"
+            android:fontFamily="@font/rubik_semibold"
+            android:textSize="14sp"
+            android:onClick="cash" />
+
 
         <Button
             android:id="@+id/nav_dash"
@@ -142,6 +157,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="244dp"
             android:layout_marginBottom="17dp"
+            android:onClick="nav_expense"
             android:alpha="0.0" />
 
         <Button
@@ -163,7 +179,6 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="108dp"
             android:layout_marginBottom="18dp"
-            android:onClick="nav_income"
             android:alpha="0.0" />
 
         <Button
@@ -176,54 +191,6 @@
             android:layout_marginBottom="18dp"
             android:onClick="nav_profile"
             android:alpha="0.0" />
-
-
-        <Button
-            android:id="@+id/bank"
-            android:layout_width="104dp"
-            android:layout_height="49dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="567dp"
-            android:backgroundTint="#354F52"
-            android:elevation="30dp"
-            android:fontFamily="@font/rubik_semibold"
-            android:onClick="bank"
-            android:text="Bank"
-            android:alpha="1"
-            android:textSize="14sp" />
-
-        <Button
-            android:id="@+id/upi"
-            android:layout_width="104dp"
-            android:layout_height="49dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="151dp"
-            android:layout_marginTop="567dp"
-            android:backgroundTint="#354F52"
-            android:text="Upi"
-            android:alpha="0.6"
-            android:fontFamily="@font/rubik_semibold"
-            android:textSize="14sp"
-            android:onClick="upi" />
-
-        <Button
-            android:id="@+id/Cash"
-            android:layout_width="104dp"
-            android:layout_height="49dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="260dp"
-            android:layout_marginTop="567dp"
-            android:backgroundTint="#354F52"
-            android:text="Cash"
-            android:alpha="0.6"
-            android:fontFamily="@font/rubik_semibold"
-            android:textSize="14sp"
-            android:onClick="cash" />
-
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

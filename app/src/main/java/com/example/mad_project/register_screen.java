@@ -83,7 +83,7 @@ public class register_screen extends AppCompatActivity {
             Boolean checki=db.insertuserdata(user_id,name,email,password,User.total_balance);
             System.out.println("Did it work" + checki);
 
-            Intent obj=new Intent(register_screen.this,home_screen.class);
+            Intent obj=new Intent(register_screen.this,CreateAccount.class);
             startActivity(obj);
         }
         else if(e_val == false)
